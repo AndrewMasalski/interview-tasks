@@ -6,7 +6,7 @@
 * [**Promises to Async/Await**: Convert promises to async/await syntax.](/src/promises2async.js)
 * [**Map by Field**: Create a map from an array of objects based on a specific field](/src/map-by-field.js)
 * [**Flatten JSON**: Flatten a nested JSON object to a single-level JSON object](/src/flatten-json.js)
-* [**FIFO (Optional Peek)**: Implement a FIFO queue using stacks](/src/fifo.js)
+* [**FIFO**: Implement a FIFO queue using stacks](/src/fifo.js)
 * [**Find Sum of Multiples**: Find the sum of multiples of a number below a given maximum](/src/math.js)
 * [**Limited Event Emitter**: Implement a custom event emitter with a feature to limit the number of event emissions](/src/event-emitter.js)
 * [**Async Loop**: Implement a function to execute asynchronous functions sequentially](/src/async-loop.js)
