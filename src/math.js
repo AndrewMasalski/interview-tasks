@@ -13,21 +13,12 @@ function multiples(a, b, max) {
   const sumOfMultiplesOfY = b * sumOfN(numMultiplesOfB);
   const sumOfMultiplesOfXY = a * b * sumOfN(numMultiplesOfAB);
 
-  const result = sumOfMultiplesOfX + sumOfMultiplesOfY - sumOfMultiplesOfXY;
-
-  return result;
-}
-
-// functional solution
-function multiplesFn(a, b, max) {
-  return [...Array(max).keys()] //create array of numbers eg [0,1,2,3,...]
-         .filter(x => !(x % a) || !(x % b)) //create array of plausible numbers - multiples of 3 and 5 [0,3,5]
-         .reduce((acc,cur) => acc + cur);   
+  return sumOfMultiplesOfX + sumOfMultiplesOfY - sumOfMultiplesOfXY;
 }
 
 // Test function
 const sum0 = multiples(3, 5, 10);
 console.log(sum0); // should output 23
 
-const sum1 = multiplesFn(3, 5, 10);
-console.log(sum1); // should output 23
+const sum1 = multiples(3, 5, 1e9); // 1 billion
+console.log(sum1); // should output 233333333166666700

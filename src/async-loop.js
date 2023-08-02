@@ -3,12 +3,7 @@ async function asyncFunction(delay) {
 }
 
 async function asyncLoop(asyncFunctions) {
-  const res = [];
   // Your implementation here
-  for (const fn of asyncFunctions) {
-    res.push(await fn());
-  }
-  return res;
 }
 
 const functions = [

@@ -4,58 +4,23 @@ Your task is to implement different tree traversal algorithms: Pre-order, In-ord
 */
 class TreeNode {
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
   }
 }
 
 function inOrderTraversal(root) {
   // Your implementation
-  const result = [];
-
-  function traverse(node) {
-    if (!node) return;
-    traverse(node.left);
-    result.push(node.value);
-    traverse(node.right);
-  }
-
-  traverse(root);
-  return result;
 }
 
 function preOrderTraversal(root) {
   // Your implementation
-  const result = [];
-
-  function traverse(node) {
-    if (!node) return;
-    result.push(node.value);
-    traverse(node.left);
-    traverse(node.right);
-  }
-
-  traverse(root);
-  return result;
 }
 
 function postOrderTraversal(root) {
   // Your implementation
-  const result = [];
-
-  function traverse(node) {
-    if (!node) return;
-    traverse(node.left);
-    traverse(node.right);
-    result.push(node.value);
-  }
-
-  traverse(root);
-  return result;
 }
 
-/* sample binary tree
+/*
+sample binary tree
         1
        / \
       2   3

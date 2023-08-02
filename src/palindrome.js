@@ -3,8 +3,7 @@ Write a function called isPalindrome that takes a string as input and returns tr
 A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
 */
 function isPalindrome(str) {
-  const reversedStr = str.split("").reverse().join("");
-  return str === reversedStr;
+  // Your implementation
 }
 
 // Test the function
