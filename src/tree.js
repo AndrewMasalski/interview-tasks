@@ -55,7 +55,8 @@ function postOrderTraversal(root) {
   return result;
 }
 
-/* sample binary tree
+/*
+sample binary tree
         1
        / \
       2   3

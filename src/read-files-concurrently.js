@@ -37,5 +37,5 @@ async function readFilesConcurrently(filePaths, maxConcurrentReads) {
 const filePaths = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt', 'file5.txt'];
 readFilesConcurrently(filePaths, 3)
   .then((fileContents) => {
-    console.log(Object.values(fileContents)); // should output sonnet
+    Object.values(fileContents).forEach(text => console.log(text)); // should output sonnet
   });

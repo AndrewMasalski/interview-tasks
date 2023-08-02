@@ -23,16 +23,6 @@ class LimitedEventEmitter {
     this.events.get(eventName).handlers.push(handler);
   }
 
-  off(eventName, handler) {
-    if (this.events.has(eventName)) {
-      const { handlers } = this.events.get(eventName);
-      const index = handlers.indexOf(handler);
-      if (index !== -1) {
-        handlers.splice(index, 1);
-      }
-    }
-  }
-
   setMaxEmits(eventName, maxEmits) {
     // your implementation
     if (this.events.has(eventName)) {
@@ -72,9 +62,6 @@ eventEmitter.setMaxEmits("event1", 2);
 eventEmitter.emit("event1", "First emission"); // Output: Handler 1: First emission, Handler 2: First emission
 eventEmitter.emit("event1", "Second emission"); // Output: Handler 1: Second emission, Handler 2: Second emission
 eventEmitter.emit("event1", "Third emission"); // No output, maximum limit reached
-
-// Remove handler1
-eventEmitter.off("event1", handler1);
 
 // handler2 should still work, but only once more due to the set limit
 eventEmitter.emit("event1", "Fourth emission"); // Output: Handler 2: Fourth emission

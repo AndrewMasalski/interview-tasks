@@ -1,7 +1,5 @@
 /*
  Given a JSON object representing a nested book data, flatten it to a single-level JSON object.
-
- Optional task - implement unflatten() function as well.
 */
 
 const book = {
@@ -35,22 +33,6 @@ function flattenJSON(jsonData) {
   return result;
 }
 
-function unflattenJSON(obj) {
-  const result = {};
-  for (const key in obj) {
-    const keys = key.split(".");
-    keys.reduce((acc, currKey, index) => {
-      if (index === keys.length - 1) {
-        acc[currKey] = obj[key];
-      } else if (!acc[currKey]) {
-        acc[currKey] = {};
-      }
-      return acc[currKey];
-    }, result);
-  }
-  return result;
-}
-
 const flattenedBook = flattenJSON(book);
 console.log(flattenedBook);
 /* Output:
@@ -62,5 +44,3 @@ console.log(flattenedBook);
   "publisher_location": "New York"
 }
 */
-
-console.log(unflattenJSON(flattenedBook));
